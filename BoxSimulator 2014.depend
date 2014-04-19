@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1397305672 source:d:\cpp\boxsim\boxsimulator 2014\addfunc.cpp
+	"Game.h"
+
+1397306088 d:\cpp\boxsim\boxsimulator 2014\game.h
+	"TXLib.h"
+	"Structs.h"
+
+1396351384 d:\cpp\boxsim\boxsimulator 2014\txlib.h
+	<assert.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stdio.h>
+	<string.h>
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<process.h>
+	<signal.h>
+	<locale.h>
+	<time.h>
+	<float.h>
+	<math.h>
+	<map>
+	<vector>
+	<string>
+	<iostream>
+	<algorithm>
+	<exception>
+	<stdexcept>
+	<conio.h>
+	<windows.h>
+	<tlhelp32.h>
+	<shellapi.h>
+	<shlobj.h>
+
+1397306836 source:d:\cpp\boxsim\boxsimulator 2014\drawing.cpp
+	"Game.h"
+
+1397568544 source:d:\cpp\boxsim\boxsimulator 2014\physics.cpp
+	"Game.h"
+
+1397569300 d:\cpp\boxsim\boxsimulator 2014\structs.h
+
+1397569336 source:d:\cpp\boxsim\boxsimulator 2014\main.cpp
+	"Game.h"
+
+1397569770 source:f:\cpp\boxsim\boxsimulator 2014\addfunc.cpp
+	"Game.h"
+
+1397306088 f:\cpp\boxsim\boxsimulator 2014\game.h
+	"TXLib.h"
+	"Structs.h"
+
+1396351384 f:\cpp\boxsim\boxsimulator 2014\txlib.h
+	<assert.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stdio.h>
+	<string.h>
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<process.h>
+	<signal.h>
+	<locale.h>
+	<time.h>
+	<float.h>
+	<math.h>
+	<map>
+	<vector>
+	<string>
+	<iostream>
+	<algorithm>
+	<exception>
+	<stdexcept>
+	<conio.h>
+	<windows.h>
+	<tlhelp32.h>
+	<shellapi.h>
+	<shlobj.h>
+
+1397588120 f:\cpp\boxsim\boxsimulator 2014\structs.h
+
+1397569718 source:f:\cpp\boxsim\boxsimulator 2014\drawing.cpp
+	"Game.h"
+
+1397587746 source:f:\cpp\boxsim\boxsimulator 2014\main.cpp
+	"Game.h"
+
+1397568544 source:f:\cpp\boxsim\boxsimulator 2014\physics.cpp
+	"Game.h"
+

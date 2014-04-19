@@ -1,0 +1,90 @@
+#include "Game.h"
+
+void colourChange (int* colour, int* colourSpeed)
+{
+    *colour += *colourSpeed;
+    if (*colour >= 255) *colour = 255;
+    if (*colour <   60) *colour =  60;
+    if (60 >= *colour || *colour >= 255) *colourSpeed = -*colourSpeed;
+}
+
+Player newPlayer (double x, double y, double r, double vX, double vY, double mass, int hp,
+                  int upKey, int downKey, int leftKey, int rightKey, int healKey, int shootKey,
+                  Bullet bullets[])
+{
+    Player p;
+
+    p.x               =         x;
+    p.y               =         y;
+    p.r               =         r;
+    p.vX              =        vX;
+    p.vY              =        vY;
+    p.mass            =      mass;
+    p.hp              =        hp;
+    p.keys.upKey      =     upKey;
+    p.keys.downKey    =   downKey;
+    p.keys.leftKey    =   leftKey;
+    p.keys.rightKey   =  rightKey;
+    p.keys.healKey    =   healKey;
+    p.keys.shootKey   =  shootKey;
+    p.bullets.bullets =   bullets;
+
+    return p;
+}
+
+
+Object::Object (double x, double y, double r, double vX, double vY, double mass) :
+    x       (theX),
+    y       (theY),
+    r       (theR),
+    vX     (theVX),
+    vY     (theVY),
+    mass (theMass);
+{}
+
+
+Bullet::Bullet (double x, double y, double r, double vX, double vY, double mass, int time) :
+    Object (x, y, r, vX, vY, mass),
+    time (theTime);
+{}
+
+Player::Player (double x, double y, double r, double vX, double vY, double mass, int hp,
+                Keys keys, Bullet bullets[]) :
+    Object (x, y, r, vX, vY, mass),
+    hp           (theHp),
+    keys       (theKeys),
+    bullets (theBullets);
+
+
+
+
+Bullet newBullet (double x, double y, double r, double vX, double vY, double mass, int time)
+{
+    Bullet b = { x, y, r, vX, vY, mass, time };
+
+    b.x     =    x;
+    b.y     =    y;
+    b.r     =    r;
+    b.vX    =   vX;
+    b.vX    =   vY;
+    b.mass  = mass;
+    b.time  = time;
+
+    return b;
+}
+
+void control (Player* player)
+{
+    assert (!PlayerOk (player)? (PlayerDump (player), 0 : 1));
+
+    if      (GetAsyncKeyState (player->keys.upKey   )) player->vY -= WORLD.godsPower;
+    else if (GetAsyncKeyState (player->keys.downKey )) player->vY += WORLD.godsPower;
+
+    if      (GetAsyncKeyState (player->keys.leftKey )) player->vX -= WORLD.godsPower;
+    else if (GetAsyncKeyState (player->keys.rightKey)) player->vX += WORLD.godsPower;
+
+    if (GetAsyncKeyState (player->keys.healKey)) player->hp += 5;
+}
+
+
+
